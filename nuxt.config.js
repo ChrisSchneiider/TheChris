@@ -1,6 +1,9 @@
+//import colors from 'vuetify/es5/util/colors'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    titleTemplate: '%s - ChrisSchneider',
     title: 'ChrisSchneider',
     meta: [
       { charset: 'utf-8' },
@@ -15,6 +18,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/variables.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -26,6 +30,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://go.nuxtjs.dev/vuetify
+    //'@nuxtjs/vuetify',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -45,6 +51,11 @@ export default {
       lang: 'en'
     }
   },
+
+  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
+  // vuetify: {
+  //   customVariables: ['~/assets/variables.scss'],
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

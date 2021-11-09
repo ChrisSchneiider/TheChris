@@ -1,7 +1,15 @@
 <template>
-  <Tutorial/>
+  <div>
+    <h1>Ei {{ echo }}</h1>
+  </div>
 </template>
 
 <script>
-export default {}
+  export default {
+    data(){
+      return{
+        echo:'ChrisSchneider!'
+      }
+    }
+  }
 </script>

@@ -1,15 +1,14 @@
 import anime from 'animejs';
 
-export function EVENTTESTE(x) {
+export function ANIME_GROUPS(x) {
 
   anime({
-    //targets:x,
-    //opacity: [0, 1],
-		//duration: 1000,
-		//easing: 'easeInOutSine',
-		//delay: 500,
-    //loop: true,
-    //height: [0,200]
+    targets:x,
+    translateY:[0,10],
+		duration: 1500,
+		easing: 'easeInOutSine',
+    direction: 'alternate',
+    loop: true,
   });
 
 

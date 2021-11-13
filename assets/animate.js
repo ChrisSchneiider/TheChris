@@ -1,56 +1,46 @@
 import anime from 'animejs';
 
-export function ANIME_GROUPS(x) {
+  var event = 0;
 
+  export function PING(){
+    return event;
+  }
+
+export function ANIME_GROUPS(a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q) {
   anime({
-    targets:x,
-    translateY:[0,10],
+    targets:[a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q],
+    translateY: function() { return anime.random(-5, 15); },
+    translateX: function() { return anime.random(-15, 5); },
 		duration: 1500,
-		easing: 'easeInOutSine',
+		easing: 'cubicBezier(0.715, 0.255, 0.375, 0.825)',
     direction: 'alternate',
     loop: true,
+    delay: anime.stagger(100)
   });
+}
 
+export function EFFECT_CI(a,b,c,d) {
+  anime({
+    targets:[a,b,c,d],
+    r:["+=25"],
+    opacity:[1,0],
+    fill:['#f15c5c'],
+		duration: 1500,
+		easing: 'linear',
+    direction: 'normal',
+    loop: true,
+    //delay: anime.stagger(100)
+  });
+}
 
-
-  // anime({
-  //   targets:x,
-  //   loop: true,
-  //   direction: 'alternate',
-  //   strokeDashoffset: [anime.setDashoffset, 280],
-  //   easing: 'easeInOutSine',
-  //   //direction:'normal',
-  //   duration: 1000,
-  //   //height: [0,'100%']
-  // });
-
-
-  // anime({
-  //   targets:x,
-  //   loop: true,
-  //   opacity: [0, 1],
-	// 	duration: 425,
-	// 	easing: "easeInOutQuad",
-	// 	delay: (x, i) => 150 * i + 500
-  // });
-
-  // anime({
-  //   targets:[x],
-
-
-  //   strokeDashoffset: [anime.setDashoffset, 0],
-  //   points: [
-  //     { value: [
-  //       'M398,385h-2V129h2V385Z',
-  //       'M409,127h2V385h-2V127Z'
-  //       ]
-  //     },
-  //   ],
-  //   //fill: ['#150485', '#590995', '#c62a88', '#03c4a1'],
-  //   stroke: ['#f1e7b6', '#fe346e', '#400082', '#00bdaa'],
-  //   easing: 'easeOutQuad',
-  //   duration: 2000,
-  //   autoplay:true,
-  //   //loop: true,
-  // });
+export function EFFECT_LI(a) {
+  anime({
+    targets:[a],
+    opacity:[0,1],
+		duration: 1500,
+		easing: 'linear',
+    direction: 'normal',
+    //loop: true,
+    //delay: anime.stagger(100)
+  });
 }

@@ -44,3 +44,46 @@ export function EFFECT_LI(a) {
     //delay: anime.stagger(100)
   });
 }
+
+export function STARTING_POINT(b,x,y,z){ // cy="278.75" r="38.906"
+  anime({
+    targets:x,
+    //opacity:[0,1],
+		duration: 1500,
+		easing: 'cubicBezier(0.715, 0.255, 0.375, 0.825)',
+    direction: 'normal',
+    r:[
+      {value:[2,5]},
+      {value:38.906,delay:100}
+    ],
+    fill:[
+      {value:"#e92525"},
+      {value:"#773535",delay:150}
+    ]
+  });
+  anime({
+    targets:y,
+    opacity:[{
+      value:[0,1],
+      delay:100,
+      duration:50
+    }],
+		duration: 1500,
+		easing: 'cubicBezier(0.715, 0.255, 0.375, 0.825)',
+    direction: 'normal',
+    r:[
+      {value:[0,2]},
+      {value:31.125,delay:200}
+    ],
+    fill:[
+      {value:"#222222"},
+      {value:"#ab4848",delay:250}
+    ]
+  });
+  anime({
+    targets:[b,z],
+    opacity:[0,1],
+    duration: 1500,
+    delay:1500
+  });
+}

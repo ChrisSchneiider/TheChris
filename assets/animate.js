@@ -38,7 +38,7 @@ export function STARTING_POINT(b,x,y,z){ // cy="278.75" r="38.906"
   anime({
     targets:x,
     //opacity:[0,1],
-		duration: 1500,
+		duration: 1300,
 		easing: bezier,
     direction: 'normal',
     r:[
@@ -57,7 +57,7 @@ export function STARTING_POINT(b,x,y,z){ // cy="278.75" r="38.906"
       delay:100,
       duration:50
     }],
-		duration: 1500,
+		duration: 1300,
 		easing: bezier,
     direction: 'normal',
     r:[
@@ -81,7 +81,7 @@ export function STARTING_POINT_BIG(b,x,y,z,e){ // cy="278.75" r="38.906"
   anime({
     targets:x,
     //opacity:[0,1],
-		duration: 1100,
+		duration: 1000,
 		easing: bezier,
     direction: 'normal',
     r:[
@@ -101,7 +101,7 @@ export function STARTING_POINT_BIG(b,x,y,z,e){ // cy="278.75" r="38.906"
       delay:100,
       duration:50
     }],
-		duration: 1100,
+		duration: 1000,
 		easing: bezier,
     direction: 'normal',
     r:[
@@ -117,7 +117,7 @@ export function STARTING_POINT_BIG(b,x,y,z,e){ // cy="278.75" r="38.906"
   anime({
     targets:[b,z],
     opacity:[0,1],
-    duration: 1500,
+    duration: 1300,
     delay:1500
   });
 
@@ -137,7 +137,7 @@ export function STARTING_POINT_SMALL(b,x,y,z){ // cy="278.75" r="38.906"
   anime({
     targets:x,
     //opacity:[0,1],
-		duration: 1500,
+		duration: 1000,
 		easing: bezier,
     direction: 'normal',
     rx:[
@@ -165,7 +165,7 @@ export function STARTING_POINT_SMALL(b,x,y,z){ // cy="278.75" r="38.906"
       delay:100,
       duration:50
     }],
-		duration: 1500,
+		duration: 1000,
 		easing: bezier,
     direction: 'normal',
     rx:[
@@ -182,7 +182,13 @@ export function STARTING_POINT_SMALL(b,x,y,z){ // cy="278.75" r="38.906"
     ]
   });
   anime({
-    targets:[b,z],
+    targets:[b],
+    opacity:[0,1],
+    duration: 1500,
+    delay:1000
+  });
+  anime({
+    targets:[z],
     opacity:[0,1],
     duration: 1500,
     delay:1500

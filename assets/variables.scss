@@ -1,4 +1,4 @@
-$masterColor: #222222;
+$masterColor: #35363a;
 
 * {
   margin: 0;
@@ -10,3 +10,18 @@ $masterColor: #222222;
 body{
   background-color: $masterColor;
 }
+.typed-cursor {
+  font-size: 38px;
+  color: #5d71ae;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  opacity: 1;
+  animation: ocultCursor .5s infinite;
+}
+@keyframes ocultCursor {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+// .typed-cursor--blink{
+//   //display: none;
+// }

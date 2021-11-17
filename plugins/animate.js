@@ -7,6 +7,18 @@ import anime from 'animejs';
   var bezier  = 'cubicBezier(0.715, 0.255, 0.375, 0.825)';
 
 
+export function INTRO_ANIME(a){
+  anime({
+    targets:a,
+    translateY: "-=200",
+    translateX: "-=300",
+		duration: 1000,
+    easing: bezier,
+    //delay:3500
+  });
+}
+
+
 export function ANIME_GROUPS(a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q) {
   anime({
     targets:[a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q],
@@ -17,6 +29,28 @@ export function ANIME_GROUPS(a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q) {
     direction: 'alternate',
     loop: true,
     delay: anime.stagger(100)
+  });
+}
+
+export function UI_INITIAL(a,b,c,d,e,f) { // cx="842" cy="383"
+  anime({
+    targets:[a,b,c,e,f],
+    cy:[300,400],
+		duration: 1000,
+    opacity:[1],
+		//easing: bezier,
+    direction: 'normal'
+    //delay: anime.stagger(100)
+  });
+  anime({
+    targets:[e],
+    duration: 1000,
+    fill:[
+      {value:"#FFFFFF"},
+      {value:"#60b4db"}
+    ],
+    easing: 'linear',
+    loop: true,
   });
 }
 

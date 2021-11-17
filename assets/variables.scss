@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Quicksand;
+  src: local('Helvetica'), local('Helvetica'), url("~/fonts/Quicksand.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: RobotoThin;
+  src: local('Helvetica'), local('Helvetica'), url("~/fonts/Roboto-Thin.ttf");
+  font-display: swap;
+}
 $masterColor: #35363a;
 
 * {
@@ -11,17 +21,40 @@ body{
   background-color: $masterColor;
 }
 .typed-cursor {
-  font-size: 38px;
+  font-size: 14px;
   color: #5d71ae;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: normal;
+  font-family:'Arial';
   opacity: 1;
+  font-weight: bold;
   animation: ocultCursor .5s infinite;
 }
 @keyframes ocultCursor {
   from {opacity: 1;}
   to {opacity: 0;}
 }
-// .typed-cursor--blink{
-//   //display: none;
-// }
+font[class="default"]{
+  font-size: 38px;
+  font-family:'Quicksand';
+  color: rgb(255, 255, 255);
+}
+.code{
+  font-size: 22px;
+  font-family:Arial, Helvetica, sans-serif
+  //font-weight: bold;
+}
+font[class="code 5d71ae"]{color: #5d71ae;}
+font[class="code 47d462"]{color: #47d462;font-style: italic;}
+font[class="code 5a5a5a"]{color: #5a5a5a;}
+font[class="code e583f3"]{color: #e583f3;}
+font[class="code e0d745"]{color: #e0d745;}
+font[class="normal"]{
+  font-size: 18px;
+  font-family:'RobotoThin';
+  color: #dddddd;
+}
+font[class="thought"]{
+  font-size: 18px;
+  font-family:'RobotoThin';
+  color: #a9e1f1;
+  font-style: italic;
+}
